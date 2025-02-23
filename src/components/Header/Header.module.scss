@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 24px 0;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  .button-secondary {
+    background-color: #fff;
+    color: #854ef2;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.content {
+  max-width: 576px;
+}
+
+.heading {
+  font-size: 42px;
+  line-height: 56px;
+}
+
+.subheading {
+  font-weight: 400;
+  margin: 24px 0;
+}

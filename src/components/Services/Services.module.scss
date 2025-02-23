@@ -1,0 +1,22 @@
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service {
+  margin: 12px;
+  min-width: 276px;
+  width: 276px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+
+  p:first-of-type {
+    font-weight: bold;
+  }
+
+  img {
+    margin: 32px 0;
+  }
+}
