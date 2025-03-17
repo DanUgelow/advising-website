@@ -17,7 +17,7 @@ export default function Header() {
           <Box component='span' sx={{ color: "#854EF2" }}>
             Helping Entrepreneurs Grow
           </Box>{" "}
-          their Business, Knowledge, & Wealth
+          Their Business, Knowledge, & Wealth
         </Typography>
         <Typography variant='h6' className={styles.subheading}>
           If you feel stuck or overwhelmed in your business I help you focus on

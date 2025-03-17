@@ -8,6 +8,7 @@ import styles from "@/styles/index.module.scss";
 import Services from "@/components/Services";
 import Packages from "@/components/Packages";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -34,12 +35,8 @@ export default function Home() {
           <Header />
           <Services />
           <About />
-
-          {/* <Header />
-          <Benefits />
-          <About />
-          <Services />
-          <Contact /> */}
+          <Packages />
+          <Contact />
         </main>
       </>
     </>

@@ -1,0 +1,37 @@
+.card-title {
+  background-color: #aa87f0;
+  color: white;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  max-width: 388px;
+  border-radius: 10px;
+  overflow: hidden;
+  align-self: baseline;
+  margin: 0 12px;
+  min-width: 320px;
+}
+
+.card-content {
+  padding: 24px;
+
+  & p {
+    font-size: 20px;
+  }
+}
+
+.benefit {
+  display: flex;
+  margin: 12px 0;
+
+  & p {
+    flex: 1;
+  }
+
+  & svg {
+    margin: 4px 8px 0 0;
+  }
+}

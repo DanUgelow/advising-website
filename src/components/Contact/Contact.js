@@ -4,7 +4,6 @@ import {
   Button,
   FormControl,
   FormHelperText,
-  Input,
   InputLabel,
   Typography,
   OutlinedInput,
@@ -14,9 +13,7 @@ import {
   Fade,
   useMediaQuery,
 } from "@mui/material";
-import Image from "next/image";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import styles from "@/components/Contact/Contact.module.scss";
 import { useTheme } from "@mui/material/styles";
 
 export default function Services() {
@@ -32,7 +29,6 @@ export default function Services() {
   const [formError, setFormError] = useState("");
 
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
-
   const validateEmail = () => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailValue)) {
       return true;
@@ -78,35 +74,40 @@ export default function Services() {
 
     setIsLoading(true);
 
-    const recaptchaToken = await executeRecaptcha("handleSubmit");
+    // const recaptchaToken = await executeRecaptcha("handleSubmit");
 
-    const res = await fetch("/api/send-email", {
-      body: JSON.stringify({
-        from: emailValue,
-        text: messageValue,
-        recaptchaToken,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        body: JSON.stringify({
+          from: emailValue,
+          message: messageValue,
+          recaptchaToken: "",
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
 
-    const response = await res;
+      const response = await res;
 
-    if (!response.ok) {
+      if (response.ok) {
+        setIsLoading(false);
+        setSucccessMessage("Email sent successfully");
+        setAlertVisibility(true);
+        setEmailValue("");
+        setMessageValue("");
+      } else {
+        setFormError("An unknown error occurred. Please try again later");
+        setAlertVisibility(true);
+      }
+
+      setIsLoading(false);
+    } catch (error) {
       setIsLoading(false);
       setFormError("An unknown error occurred. Please try again later");
       setAlertVisibility(true);
-
-      return;
     }
-
-    setIsLoading(false);
-    setSucccessMessage("Email sent successfully");
-    setAlertVisibility(true);
-    setEmailValue("");
-    setMessageValue("");
   };
 
   return (
@@ -121,7 +122,7 @@ export default function Services() {
         sx={{
           zIndex: 1,
           position: "relative",
-          maxWidth: "800px",
+          maxWidth: "1025px",
           margin: "0 auto",
         }}
       >
@@ -129,37 +130,24 @@ export default function Services() {
           component='h2'
           sx={{
             textAlign: "center",
-            fontSize: "36px",
-            fontWeight: 500,
             margin: "0 0 12px",
+            fontSize: "30px",
           }}
         >
-          Contact
+          Need Something Specific?
         </Typography>
-        <Box
+        <Typography
           sx={{
+            fontSize: "20px",
+            margin: "0 auto",
+            maxWidth: "500px",
             textAlign: "center",
-            margin: "24px 12px",
           }}
         >
-          <Button
-            className={styles["button-secondary"]}
-            variant='contained'
-            component='a'
-            sx={{
-              width: {
-                xs: "100%",
-                sm: "inherit",
-              },
-              maxWidth: "320px",
-            }}
-            href='https://calendly.com/dan-ugelow/free-consultation'
-            target='_blank'
-          >
-            Free discovery call
-          </Button>
-        </Box>
-        {/* <Fade
+          if you need help with a just website, design, social media, marketing,
+          or more, book a free consultation or reach out through the form below.
+        </Typography>
+        <Fade
           in={Boolean(alertVisibility)}
           timeout={{ enter: 300, exit: 5000 }}
           addEndListener={() => {
@@ -174,19 +162,19 @@ export default function Services() {
             sx={{
               width: "100%",
               maxWidth: "300px",
-              margin: "0 auto",
+              margin: "20px auto",
               marginBottom: "20px",
             }}
           >
             {successMessage || formError}
           </Alert>
-        </Fade> */}
-        {/* <FormGroup
+        </Fade>
+        <FormGroup
           sx={{
             width: "100%",
             backgroundColor: "#EEF7FF",
             padding: "24px",
-            borderRadius: "24px",
+            borderRadius: "10px",
           }}
         >
           <FormControl required sx={{ marginBottom: "24px" }}>
@@ -234,15 +222,8 @@ export default function Services() {
           >
             {isLoading ? <CircularProgress /> : "Submit"}
           </Button>
-        </FormGroup> */}
+        </FormGroup>
       </Box>
-      <Image
-        src='/contact-plant-left.png'
-        width={isDesktop ? 271 : 171}
-        height={isDesktop ? 310 : 210}
-        alt=''
-        className={styles["contact-plant-left"]}
-      />
     </Box>
   );
 }

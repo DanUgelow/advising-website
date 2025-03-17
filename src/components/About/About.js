@@ -48,7 +48,7 @@ export default function About() {
             width={148}
             height={148}
           />
-          <Image src='/profile-pic.png' width={433} height={577} />
+          <Image src='/profile-pic.png' width={364} height={485} />
           <Box sx={{ maxWidth: "791px", padding: "60px 12px" }}>
             <Box sx={{ textAlign: "center" }}>
               <Typography variant='h3' component='p' className={styles.heading}>
