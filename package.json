@@ -2,7 +2,6 @@
   "name": "advising-website",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@1.22.21",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.10",
+    "@cloudflare/workers-types": "^4.20250313.0",
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
@@ -20,7 +21,8 @@
     "react-dom": "^19.0.0",
     "react-google-recaptcha-v3": "^1.10.1",
     "resend": "^4.1.2",
-    "sass": "^1.85.0"
+    "sass": "^1.85.0",
+    "wrangler": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
