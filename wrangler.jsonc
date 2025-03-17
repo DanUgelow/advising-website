@@ -1,0 +1,4 @@
+{
+  "main": ".vercel/output/static",
+  "name": "advising-website"
+}
