@@ -14,8 +14,6 @@
     "deploy:worker": "npm run build:worker && wrangler deploy"
   },
   "dependencies": {
-    "@cloudflare/next-on-pages": "^1.13.10",
-    "@cloudflare/workers-types": "^4.20250313.0",
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
@@ -26,12 +24,14 @@
     "react-dom": "^19.0.0",
     "react-google-recaptcha-v3": "^1.10.1",
     "resend": "^4.1.2",
-    "sass": "^1.85.0",
-    "wrangler": "^4.0.0"
+    "sass": "^1.85.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.10",
+    "@cloudflare/workers-types": "^4.20250313.0",
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.1.7"
+    "eslint-config-next": "15.1.7",
+    "wrangler": "^4.0.0"
   }
 }
