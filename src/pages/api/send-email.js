@@ -34,7 +34,6 @@ const sendEmailAPI = async (req) => {
 
     return Response.json(data);
   } catch (error) {
-    console.log("insideError12", error);
     return Response.json({ error }, { status: 500 });
   }
 };
