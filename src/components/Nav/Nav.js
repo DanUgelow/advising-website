@@ -67,7 +67,13 @@ export default function Nav() {
             </Box>
           </Box>
           <Box
-            sx={{ textAlign: "center", display: "flex", alignItems: "center" }}
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
           >
             {navItems.map((item) => (
               <Button

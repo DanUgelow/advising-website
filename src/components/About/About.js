@@ -12,16 +12,7 @@ export default function About() {
 
   return (
     <>
-      <Box
-        sx={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(215, 213, 248, 1), rgba(133, 78, 242, 1) 60%);",
-          position: "relative",
-          color: "white",
-          overflow: "hidden",
-        }}
-        id='About'
-      >
+      <Box className={styles.container} id='About'>
         <Box
           sx={{
             display: "flex",
@@ -48,35 +39,56 @@ export default function About() {
             width={148}
             height={148}
           />
-          <Image src='/profile-pic.png' width={364} height={485} />
-          <Box sx={{ maxWidth: "791px", padding: "60px 12px" }}>
-            <Box sx={{ textAlign: "center" }}>
-              <Typography variant='h3' component='p' className={styles.heading}>
-                <strong>Hello, I’m Dan Ugelow</strong>
+          <Image
+            src='/profile-pic.png'
+            width={364}
+            height={485}
+            className={styles["profile-image"]}
+          />
+          {/* <Box className={styles["image-placeholder"]} /> */}
+          <Box
+            sx={{
+              padding: "60px 12px",
+              display: "flex",
+              width: "100%",
+              justifyContent: "end",
+            }}
+          >
+            <Box className={styles.content}>
+              <Box>
+                <Typography
+                  variant='h3'
+                  component='p'
+                  className={styles.heading}
+                >
+                  <strong>Hello, I’m Dan Ugelow</strong>
+                </Typography>
+                <Typography
+                  variant='h6'
+                  component='p'
+                  sx={{ marginBottom: "40px" }}
+                >
+                  <strong>
+                    Software Developer, UX Designer, & Entrepreneur
+                  </strong>
+                </Typography>
+              </Box>
+
+              <Typography className={styles.body}>
+                I work with entrepreneurs to provide technical expertise
+                alongside practical holistic guidance to alleviate their pain
+                points and elevate their business.
               </Typography>
-              <Typography
-                variant='h6'
-                component='p'
-                sx={{ marginBottom: "40px" }}
-              >
-                <strong>Software Developer, UX Designer, & Entrepreneur</strong>
+              <Typography className={styles.body}>
+                My experience ranges from working at fortune 500 companies as a
+                Software Developer to advising entrepreneurs on social media,
+                marketing, and technology to{" "}
+                <strong>
+                  <u>increase their business success</u>
+                </strong>
+                .
               </Typography>
             </Box>
-
-            <Typography className={styles.body}>
-              I work with entrepreneurs to provide technical expertise alongside
-              practical holistic guidance to alleviate their pain points and
-              elevate their business.
-            </Typography>
-            <Typography className={styles.body}>
-              My experience ranges from working at fortune 500 companies as a
-              Software Developer to advising entrepreneurs on social media,
-              marketing, and technology to{" "}
-              <strong>
-                <u>increase their business success</u>
-              </strong>
-              .
-            </Typography>
           </Box>
         </Box>
       </Box>

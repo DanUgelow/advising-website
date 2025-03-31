@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import styles from "@/components/Header/Header.module.scss";
 import { Button, Typography, useMediaQuery } from "@mui/material";
-import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import FinanceSVG from "../SVG/Finance";
 
@@ -14,19 +13,24 @@ export default function Header() {
     <Box className={styles["container"]} id='Home'>
       <Box className={styles.content}>
         <Typography variant='h4' component='h1' className={styles.heading}>
-          <Box component='span' sx={{ color: "#854EF2" }}>
+          <Box component='span' sx={{ color: "#854EF2", fontWeight: 700 }}>
             Helping Entrepreneurs Grow
-          </Box>{" "}
+          </Box>
+        </Typography>
+        <Typography variant='h4' component='p' className={styles.heading}>
           Their Business, Knowledge, & Wealth
         </Typography>
-        <Typography variant='h6' className={styles.subheading}>
+        <Typography variant='h6' component='p' className={styles.subheading}>
           If you feel stuck or overwhelmed in your business I help you focus on
           the essentials for success.
         </Typography>
         <Button
           variant='contained'
           sx={{
-            marginRight: "36px",
+            marginRight: {
+              xs: "0",
+              sm: "36px",
+            },
             marginBottom: {
               xs: "16px",
               sm: 0,
@@ -58,7 +62,16 @@ export default function Header() {
           Free Consultation
         </Button>
       </Box>
-      <FinanceSVG />
+      <Box
+        sx={{
+          display: {
+            xs: "none",
+            md: "inline",
+          },
+        }}
+      >
+        <FinanceSVG />
+      </Box>
     </Box>
   );
 }

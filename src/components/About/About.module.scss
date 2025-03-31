@@ -1,6 +1,65 @@
+.container {
+  background-image: linear-gradient(
+    to right,
+    rgb(168, 164, 244),
+    rgba(133, 78, 242, 1) 60%
+  );
+  position: relative;
+  color: white;
+  overflow: hidden;
+
+  @media only screen and (min-width: 870px) {
+    background-image: linear-gradient(
+      to right,
+      rgba(215, 213, 248, 1),
+      rgba(133, 78, 242, 1) 60%
+    );
+  }
+}
+
 .heading {
   font-size: 42px;
   margin-bottom: 24px;
+}
+
+.profile-image {
+  position: absolute;
+  bottom: 0;
+  display: none;
+
+  @media only screen and (min-width: 870px) {
+    display: block;
+  }
+}
+
+// .image-placeholder {
+//   width: 800px;
+//   height: 485px;
+// }
+
+.content {
+  text-align: center;
+
+  @media only screen and (min-width: 870px) {
+    max-width: 500px;
+  }
+
+  @media only screen and (min-width: 940px) {
+    max-width: 580px;
+  }
+
+  @media only screen and (min-width: 1060px) {
+    max-width: 600px;
+  }
+
+  @media only screen and (min-width: 1060px) {
+    max-width: 700px;
+    padding-right: 22px;
+  }
+
+  @media only screen and (min-width: 1170px) {
+    max-width: 800px;
+  }
 }
 
 .body {
@@ -36,6 +95,11 @@
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
+  flex-direction: column;
+
+  @media only screen and (min-width: 710px) {
+    flex-direction: row;
+  }
 
   p {
     font-size: 22px;
@@ -53,6 +117,11 @@
   position: absolute;
   right: -6px;
   top: 0px;
+  display: none;
+
+  @media only screen and (min-width: 1170px) {
+    display: block;
+  }
 }
 
 .card-left {

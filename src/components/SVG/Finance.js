@@ -2,8 +2,6 @@ const FinanceSVG = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      // width='880.182'
-      // height='664.736'
       width='538px'
       viewBox='0 0 880.182 664.736'
       xmlnsXlink='http://www.w3.org/1999/xlink'
