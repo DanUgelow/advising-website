@@ -93,12 +93,14 @@ export default function Nav() {
                 {item}
               </Button>
             ))}
-            <Image
-              src='/icons8-linkedin-50.png'
-              width={39}
-              height={39}
-              alt='LinkedIn'
-            />
+            <a href='https://www.linkedin.com/in/danugelow/' target='_blank'>
+              <Image
+                src='/icons8-linkedin-50.png'
+                width={29}
+                height={29}
+                alt='LinkedIn'
+              />
+            </a>
           </Box>
         </Toolbar>
       </AppBar>

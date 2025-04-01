@@ -1,9 +1,13 @@
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 100px 24px 0;
+  padding: 140px 24px 0;
   max-width: 1300px;
   margin: 0 auto;
+
+  @media only screen and (min-width: 488px) {
+    padding-top: 100px;
+  }
 
   .button-secondary {
     background-color: #fff;
