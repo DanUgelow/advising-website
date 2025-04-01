@@ -41,7 +41,7 @@ export default function Header() {
             },
           }}
           component='a'
-          href='https://calendly.com/dan-ugelow/breathwork'
+          href='https://calendly.com/dan-ugelow/advising-session'
           target='_blank'
         >
           Book now

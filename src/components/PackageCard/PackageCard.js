@@ -10,7 +10,7 @@ const check = (
   </svg>
 );
 
-const PackageCard = ({ title, subheading, benefits, free }) => {
+const PackageCard = ({ title, subheading, benefits, free, href }) => {
   return (
     <Box className={styles.card}>
       <Typography className={styles["card-title"]} variant='h6' component='p'>
@@ -33,7 +33,7 @@ const PackageCard = ({ title, subheading, benefits, free }) => {
             color: free && "#854ef2",
           }}
           component='a'
-          href='https://calendly.com/dan-ugelow/breathwork'
+          href={href}
           target='_blank'
         >
           {free ? "Free consultation" : "Book now"}

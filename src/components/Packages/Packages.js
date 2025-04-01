@@ -61,16 +61,20 @@ export default function Packages() {
           title='ADVISING'
           benefits={advising}
           subheading='Advising as you go. Book sessions as you need them.'
+          href='https://calendly.com/dan-ugelow/advising-session'
         />
         <PackageCard
           title='COMPLETE PACKAGE'
           benefits={completePackage}
           subheading='If you’re feeling stuck or uncertain. Advising and business aid that completely supports your knowledge and vision.'
+          href='https://calendly.com/dan-ugelow/free-consultation'
+          free
         />
         <PackageCard
           title='CUSTOM PLAN'
           benefits={custom}
           subheading='Customized plan to fit your needs and budget.'
+          href='https://calendly.com/dan-ugelow/free-consultation'
           free
         />
       </Box>
