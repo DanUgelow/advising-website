@@ -56,7 +56,7 @@ export default function Nav() {
                   fontWeight: "500",
                 }}
               >
-                INSPIRA{" "}
+                DU{" "}
                 <Box
                   component='span'
                   sx={{ color: "#854EF2", fontWeight: 400 }}

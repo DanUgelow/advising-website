@@ -1,13 +1,11 @@
 import Box from "@mui/material/Box";
 import styles from "@/components/Header/Header.module.scss";
-import { Button, Typography, useMediaQuery } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import FinanceSVG from "../SVG/Finance";
 
 export default function Header() {
   const theme = useTheme();
-
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Box className={styles["container"]} id='Home'>
@@ -21,7 +19,7 @@ export default function Header() {
           Their Business, Knowledge, & Wealth
         </Typography>
         <Typography variant='h6' component='p' className={styles.subheading}>
-          If you feel stuck or overwhelmed in your business I help you focus on
+          If you feel stuck or overwhelmed in your business, I help you focus on
           the essentials for success.
         </Typography>
         <Button
