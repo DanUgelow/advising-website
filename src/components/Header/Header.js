@@ -19,7 +19,7 @@ export default function Header() {
           Their Business, Knowledge, & Wealth
         </Typography>
         <Typography variant='h6' component='p' className={styles.subheading}>
-          If you feel stuck or overwhelmed in your business, I help you focus on
+          If you're a solo entrepreneur or a small business, I help you focus on
           the essentials for success.
         </Typography>
         <Button

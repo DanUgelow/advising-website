@@ -22,9 +22,9 @@ const sendEmailAPI = async (req) => {
     // if (verifyData?.success && verifyData?.score > 0.5) {
 
     const { data, error } = await resend.emails.send({
-      from: "advising@email.inspiradvising.com",
+      from: "advising@email.duadvising.com",
       to: process.env.PERSONAL_EMAIL_PRIVATE,
-      subject: `Inspira Advising: ${from}`,
+      subject: `DU Advising: ${from}`,
       text: message,
     });
 
