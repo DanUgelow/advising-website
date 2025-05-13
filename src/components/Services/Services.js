@@ -31,7 +31,7 @@ const servicesArr = [
     services: [
       "Guidance to refocus and revitalize your business",
       "Customized guides you can always reference",
-      "Solutuons for pain points",
+      "Solutions for pain points",
     ],
   },
   {

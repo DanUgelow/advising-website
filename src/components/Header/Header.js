@@ -20,7 +20,8 @@ export default function Header() {
         </Typography>
         <Typography variant='h6' component='p' className={styles.subheading}>
           If you're a solo entrepreneur or a small business, I help you focus on
-          the essentials for success.
+          the essentials for success &mdash; advising, websites, tech and social
+          media support
         </Typography>
         <Button
           variant='contained'
