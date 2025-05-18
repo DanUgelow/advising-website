@@ -144,8 +144,8 @@ export default function Services() {
             textAlign: "center",
           }}
         >
-          if you need help with a just website, design, social media, marketing,
-          or more, book a free consultation or reach out through the form below.
+          If you need help with a website, design, social media, marketing, or
+          more, book a free consultation or reach out through the form below.
         </Typography>
         <Fade
           in={Boolean(alertVisibility)}
