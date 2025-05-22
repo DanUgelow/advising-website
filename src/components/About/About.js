@@ -61,7 +61,7 @@ export default function About() {
                   component='p'
                   className={styles.heading}
                 >
-                  <strong>Hello, I’m Dan Ugelow</strong>
+                  <strong>Hi, I'm Dan</strong>
                 </Typography>
                 <Typography
                   variant='h6'
@@ -80,8 +80,8 @@ export default function About() {
                 points and elevate their business.
               </Typography>
               <Typography className={styles.body}>
-                My experience ranges from working at fortune 500 companies as a
-                Software Developer to advising entrepreneurs on social media,
+                My experience ranges from working at Fortune 500 companies as a
+                software developer to advising entrepreneurs on social media,
                 marketing, and technology to{" "}
                 <strong>
                   <u>increase their business success</u>

@@ -7,7 +7,7 @@ const servicesArr = [
   {
     title: "Technology Support",
     icon: "/tech-support.png",
-    body: "Dedicated support for websites, social media, email, and more. Get help with questions, development, and best practices",
+    // body: "Dedicated support for websites, social media, email, and more. Get help with questions, development, and best practices",
     services: [
       "Fixing website issues",
       "Solutions for technical problems",
@@ -17,7 +17,7 @@ const servicesArr = [
   {
     title: "Website Development & Design",
     icon: "/web-dev.png",
-    body: "Assistance in creating or improving your website. From design feedback, ideation, to troubleshooting",
+    // body: "Assistance in creating or improving your website. From design feedback, ideation, to troubleshooting",
     services: [
       "Building your website",
       "Enhancing your existing website",
@@ -27,7 +27,7 @@ const servicesArr = [
   {
     title: "Clarity & Strategic Planning",
     icon: "/bus-strategy.png",
-    body: "Focus on your vision and business potential. Plan and execute on your goals. Streamline your process",
+    // body: "Focus on your vision and business potential. Plan and execute on your goals. Streamline your process",
     services: [
       "Guidance to refocus and revitalize your business",
       "Customized guides you can always reference",
@@ -37,7 +37,7 @@ const servicesArr = [
   {
     title: "Social Media",
     icon: "/social-media.png",
-    body: "Guidance, tips, and resources for harnessing a successful social media",
+    // body: "Guidance, tips, and resources for harnessing a successful social media",
     services: [
       "Tailored social media templates",
       "Learn about best practices",
@@ -77,8 +77,8 @@ export default function Services() {
           <Box className={styles.service}>
             <Typography>{item.title}</Typography>
             <Image width={100} height={100} src={item.icon} />
-            <Typography>{item.body}</Typography>
-            <Divider sx={{ margin: "12px 0" }} />
+            {/* <Typography>{item.body}</Typography> */}
+            {/* <Divider sx={{ margin: "12px 0" }} /> */}
             <Typography component='ul'>
               {item.services.map((service) => (
                 <Typography

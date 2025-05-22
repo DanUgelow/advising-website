@@ -45,16 +45,6 @@ export default function Packages() {
         >
           Let’s Work Together
         </Typography>
-
-        <Typography
-          sx={{
-            fontSize: "20px",
-            margin: "0 auto 60px",
-            maxWidth: "350px",
-          }}
-        >
-          100% money back guarantee
-        </Typography>
       </Box>
       <Box className={styles.packages}>
         <PackageCard
@@ -64,14 +54,14 @@ export default function Packages() {
           href='https://calendly.com/dan-ugelow/advising-session'
         />
         <PackageCard
-          title='COMPLETE PACKAGE'
+          title='ADVISING+'
           benefits={completePackage}
           subheading='If you’re feeling stuck or uncertain. Advising and business aid that completely supports your knowledge and vision.'
           href='https://calendly.com/dan-ugelow/free-consultation'
           free
         />
         <PackageCard
-          title='CUSTOM PLAN'
+          title='CUSTOMIZED'
           benefits={custom}
           subheading='Customized plan to fit your needs and budget.'
           href='https://calendly.com/dan-ugelow/free-consultation'
